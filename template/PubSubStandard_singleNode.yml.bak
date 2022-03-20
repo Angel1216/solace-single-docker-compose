@@ -5,7 +5,7 @@ services:
   primary:
     container_name: solacePubSubStandardSingleNode
     image: solace/solace-pubsub-standard:latest
-    shm_size: 2g
+    shm_size: 1g
     ulimits:
       core: 1
       nofile:
@@ -54,4 +54,4 @@ services:
     environment:
       - username_admin_globalaccesslevel=admin
       - username_admin_password=admin
-      - system_scaling_maxconnectioncount=200
+      - system_scaling_maxconnectioncount=100
