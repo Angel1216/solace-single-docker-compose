@@ -39,7 +39,7 @@ Run the following command to create a PubSub+ software message broker using the 
 ```
 docker-compose -f PubSubStandard_singleNode.yml up -d
 ```
-The Compose template runs a message broker named `solacePubSubStandardSingleNode`, using the `latest` PubSub+ Standard image pulled from Docker Hub, creates an `admin` user with global access permissions, and publishes the following message broker container ports to the same ports on the host:
+The Compose template runs a message broker named `pubSubStandardSingleNode`, using the `latest` PubSub+ Standard image pulled from Docker Hub, creates an `admin` user with global access permissions, and publishes the following message broker container ports to the same ports on the host:
 
 * port 8008 -- Web transport
 * port 1883 -- MQTT Default VPN
@@ -68,7 +68,7 @@ Solace PubSub+ Manager management access:
 Solace CLI management access:
 1. Enter the following `docker exec` command:
 ```
-docker exec -it solacePubSubStandardSingleNode /usr/sw/loads/currentload/bin/cli -A
+docker exec -it pubSubStandardSingleNode /usr/sw/loads/currentload/bin/cli -A
 ```
 2. Enter the following commands to enter configuration mode:
 ```
